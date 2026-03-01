@@ -1,10 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Pritam Dutta</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pritam Dutta | Physics Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 15px 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    min-height: 100vh;
+    padding: 120px 10%;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #38bdf8;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+}
+
+.skills span {
+    display: inline-block;
+    background: #334155;
+    padding: 8px 15px;
+    margin: 8px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+</style>
 </head>
+
 <body>
-    <h1>Hello, I'm Pritam!</h1>
-    <p>Welcome to my GitHub website.</p>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+    <h1>Pritam Dutta</h1>
+    <p>Aspiring Physicist | Computational Simulation | Small Spacecraft Systems</p>
+    <button onclick="scrollToSection('projects')">View My Work</button>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+        I am deeply interested in computational physics, detector simulations,
+        and spacecraft systems engineering. My work focuses on building strong
+        numerical and programming foundations while contributing to real
+        scientific projects.
+        </p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Detector Simulation</h3>
+        <p>Working on simulation-based analysis to build computational research skills.</p>
+    </div>
+
+    <div class="card">
+        <h3>Rocket Motor Development</h3>
+        <p>Experience in propellant preparation, testing, and design of small-scale rocket motors.</p>
+    </div>
+
+    <div class="card">
+        <h3>Flight Computer (STM-32)</h3>
+        <p>Developed embedded flight computer system for telemetry and control.</p>
+    </div>
+
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Computational Physics</span>
+        <span>Detector Simulation</span>
+        <span>Numerical Methods</span>
+        <span>C / C++</span>
+        <span>Python</span>
+        <span>Embedded Systems</span>
+        <span>Rocket Propulsion</span>
+        <span>Electromagnetism</span>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: your-email@example.com</p>
+        <p>GitHub: github.com/yourusername</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Pritam Dutta | Built with GitHub Pages
+</footer>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
 </body>
 </html>
