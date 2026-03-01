@@ -4,193 +4,176 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pritam Dutta | Physics Portfolio</title>
-
 <style>
-* {
+/* BASE */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
+    font-family: "Segoe UI", sans-serif;
     scroll-behavior: smooth;
+    background: #f5f5f5;
+    color: #111;
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* NAV */
 nav {
     position: fixed;
-    width: 100%;
     top: 0;
-    background: rgba(15, 23, 42, 0.95);
-    padding: 15px 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
     text-align: center;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 10;
 }
-
 nav a {
-    color: #e2e8f0;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: 500;
-    transition: 0.3s;
+    margin: 0 15px;
+    font-weight: 600;
+    color: #333;
 }
-
 nav a:hover {
-    color: #38bdf8;
+    color: #007acc;
 }
-
+/* SECTIONS */
 section {
-    min-height: 100vh;
-    padding: 120px 10%;
+    padding: 100px 15%;
+    min-height: 60vh;
 }
-
 h1, h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    color: #38bdf8;
-}
-
-.hero p {
-    font-size: 20px;
-    max-width: 600px;
-}
-
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    background: #334155;
-}
-
-.skills span {
-    display: inline-block;
-    background: #334155;
-    padding: 8px 15px;
-    margin: 8px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-footer {
+/* HERO */
+#home {
+    background: #fff;
     text-align: center;
-    padding: 20px;
-    background: #1e293b;
+    padding-top: 130px;
 }
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background: #38bdf8;
-    color: #0f172a;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+#home h1 {
+    font-size: 50px;
+    color: #007acc;
+}
+#home p {
+    font-size: 20px;
     margin-top: 10px;
 }
-
-button:hover {
-    background: #0ea5e9;
+/* CARDS */
+.card {
+    background: #fff;
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+/* GRID */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+/* FOOTER */
+footer {
+    background: #333;
+    color: #eee;
+    text-align: center;
+    padding: 15px;
 }
 </style>
 </head>
-
 <body>
 
+<!-- NAVIGATION -->
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#research">Research</a>
     <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
+    <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="home" class="hero">
+<!-- HOME -->
+<section id="home">
     <h1>Pritam Dutta</h1>
-    <p>Aspiring Physicist | Computational Simulation | Small Spacecraft Systems</p>
-    <button onclick="scrollToSection('projects')">View My Work</button>
+    <p>Aspiring Physicist | Computational Simulation | Space Systems</p>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
     <h2>About Me</h2>
     <div class="card">
         <p>
-        I am deeply interested in computational physics, detector simulations,
-        and spacecraft systems engineering. My work focuses on building strong
-        numerical and programming foundations while contributing to real
-        scientific projects.
+            I am a physics enthusiast focused on computational physics, detector 
+            simulations, and spacecraft systems engineering. My work involves 
+            research-driven simulations, embedded systems, and hands-on 
+            experimental design.
         </p>
     </div>
 </section>
 
+<!-- RESEARCH -->
+<section id="research">
+    <h2>Research Interests</h2>
+    <div class="card">
+        <ul>
+            <li>Detector simulations and signal modeling.</li>
+            <li>Numerical methods for physical systems and data.</li>
+            <li>Small spacecraft systems and payload development.</li>
+            <li>Embedded systems for instrumentation.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- PROJECTS -->
 <section id="projects">
-    <h2>Projects</h2>
-
+    <h2>Selected Projects</h2>
     <div class="card">
-        <h3>Detector Simulation</h3>
-        <p>Working on simulation-based analysis to build computational research skills.</p>
+        <strong>Detector Simulation</strong>
+        <p>Simulation-based study of detector response using numerical methods.</p>
     </div>
-
     <div class="card">
-        <h3>Rocket Motor Development</h3>
-        <p>Experience in propellant preparation, testing, and design of small-scale rocket motors.</p>
+        <strong>Rocket Motor Development</strong>
+        <p>Design and testing of small-scale rocket propulsion systems.</p>
     </div>
-
     <div class="card">
-        <h3>Flight Computer (STM-32)</h3>
-        <p>Developed embedded flight computer system for telemetry and control.</p>
-    </div>
-
-</section>
-
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>Computational Physics</span>
-        <span>Detector Simulation</span>
-        <span>Numerical Methods</span>
-        <span>C / C++</span>
-        <span>Python</span>
-        <span>Embedded Systems</span>
-        <span>Rocket Propulsion</span>
-        <span>Electromagnetism</span>
+        <strong>Flight Computer (STM32)</strong>
+        <p>Development of an embedded flight computer for telemetry and control.</p>
     </div>
 </section>
 
+<!-- CV -->
+<section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <div class="card">
+        <p>Click below to download my CV or view online.</p>
+        <a href="your-cv.pdf" download>
+            <button>Download CV (PDF)</button>
+        </a>
+    </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
-    <div class="card">
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
+    <div class="grid-2">
+        <div class="card">
+            <p><strong>Email:</strong> your-email@example.com</p>
+            <p><strong>GitHub:</strong> github.com/yourusername</p>
+        </div>
+        <div class="card">
+            <p><strong>Connect:</strong></p>
+            <p><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+            <p><a href="https://twitter.com/yourusername">Twitter</a></p>
+        </div>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    © 2026 Pritam Dutta | Built with GitHub Pages
+    © 2026 Pritam Dutta — Academic Portfolio
 </footer>
-
-<script>
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
-</script>
 
 </body>
 </html>
