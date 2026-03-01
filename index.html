@@ -3,177 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pritam Dutta | Physics Portfolio</title>
+<title>Pritam Dutta – Physics Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-/* BASE */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", sans-serif;
-    scroll-behavior: smooth;
-    background: #f5f5f5;
-    color: #111;
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f8fafc, #eef2f7);
+  color: #1f2937;
+  text-align: center;
+  overflow-x: hidden;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
+
 /* NAV */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: white;
-    border-bottom: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-    z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
 }
 nav a {
-    margin: 0 15px;
-    font-weight: 600;
-    color: #333;
+  margin: 0 18px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  transition: 0.3s;
 }
 nav a:hover {
-    color: #007acc;
+  color: #2563eb;
 }
-/* SECTIONS */
-section {
-    padding: 100px 15%;
-    min-height: 60vh;
-}
-h1, h2 {
-    margin-bottom: 15px;
-}
+
 /* HERO */
-#home {
-    background: #fff;
-    text-align: center;
-    padding-top: 130px;
+header {
+  padding: 140px 20px 60px;
 }
-#home h1 {
-    font-size: 50px;
-    color: #007acc;
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-#home p {
-    font-size: 20px;
-    margin-top: 10px;
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
-/* CARDS */
+h1 {
+  margin: 20px 0 5px;
+  font-size: 2.7rem;
+  font-weight: 600;
+}
+.subtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* LINKS */
+.links a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #2563eb;
+  transition: 0.3s;
+}
+.links a:hover {
+  letter-spacing: 1px;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 850px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+ul {
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 8px;
+}
+
+/* CARD STYLE */
 .card {
-    background: #fff;
-    padding: 25px;
-    margin: 15px 0;
-    border-radius: 8px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
-/* GRID */
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
 }
+
 /* FOOTER */
 footer {
-    background: #333;
-    color: #eee;
-    text-align: center;
-    padding: 15px;
+  padding: 30px;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
 </style>
 </head>
+
 <body>
 
-<!-- NAVIGATION -->
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<!-- HOME -->
-<section id="home">
-    <h1>Pritam Dutta</h1>
-    <p>Aspiring Physicist | Computational Simulation | Space Systems</p>
-</section>
+<header>
+  <img src="https://via.placeholder.com/150" alt="Pritam Dutta">
+  <h1>Pritam Dutta</h1>
+  <p class="subtitle">
+    Physics Student | Computational Simulation | Space Systems Engineering
+  </p>
+  <div class="links">
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    <a href="mailto:your-email@example.com">Email</a>
+  </div>
+</header>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            I am a physics enthusiast focused on computational physics, detector 
-            simulations, and spacecraft systems engineering. My work involves 
-            research-driven simulations, embedded systems, and hands-on 
-            experimental design.
-        </p>
-    </div>
-</section>
+<div id="about" class="section">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am interested in computational physics, detector simulations, and 
+      small spacecraft systems. My focus is on building strong numerical 
+      foundations while contributing to research-driven scientific projects.
+    </p>
+  </div>
+</div>
 
-<!-- RESEARCH -->
-<section id="research">
-    <h2>Research Interests</h2>
-    <div class="card">
-        <ul>
-            <li>Detector simulations and signal modeling.</li>
-            <li>Numerical methods for physical systems and data.</li>
-            <li>Small spacecraft systems and payload development.</li>
-            <li>Embedded systems for instrumentation.</li>
-        </ul>
-    </div>
-</section>
+<div id="research" class="section">
+  <h2>Research Interests</h2>
+  <div class="card">
+    <ul>
+      <li>Detector simulations and modeling</li>
+      <li>Numerical methods in physics</li>
+      <li>Embedded systems for instrumentation</li>
+      <li>Rocket propulsion and small satellite systems</li>
+    </ul>
+  </div>
+</div>
 
-<!-- PROJECTS -->
-<section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="card">
-        <strong>Detector Simulation</strong>
-        <p>Simulation-based study of detector response using numerical methods.</p>
-    </div>
-    <div class="card">
-        <strong>Rocket Motor Development</strong>
-        <p>Design and testing of small-scale rocket propulsion systems.</p>
-    </div>
-    <div class="card">
-        <strong>Flight Computer (STM32)</strong>
-        <p>Development of an embedded flight computer for telemetry and control.</p>
-    </div>
-</section>
+<div id="projects" class="section">
+  <h2>Selected Projects</h2>
 
-<!-- CV -->
-<section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <div class="card">
-        <p>Click below to download my CV or view online.</p>
-        <a href="your-cv.pdf" download>
-            <button>Download CV (PDF)</button>
-        </a>
-    </div>
-</section>
+  <div class="card">
+    <strong>Detector Simulation Project</strong>
+    <p>Simulation-based analysis for developing computational research skills.</p>
+  </div>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="grid-2">
-        <div class="card">
-            <p><strong>Email:</strong> your-email@example.com</p>
-            <p><strong>GitHub:</strong> github.com/yourusername</p>
-        </div>
-        <div class="card">
-            <p><strong>Connect:</strong></p>
-            <p><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
-            <p><a href="https://twitter.com/yourusername">Twitter</a></p>
-        </div>
-    </div>
-</section>
+  <div class="card">
+    <strong>Rocket Motor Development</strong>
+    <p>Design and testing of experimental propulsion systems.</p>
+  </div>
 
-<!-- FOOTER -->
+  <div class="card">
+    <strong>Flight Computer (STM-32)</strong>
+    <p>Embedded telemetry and control system for rocket applications.</p>
+  </div>
+</div>
+
+<div id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: your-email@example.com</p>
+    <p>GitHub: github.com/yourusername</p>
+  </div>
+</div>
+
 <footer>
-    © 2026 Pritam Dutta — Academic Portfolio
+  © 2026 Pritam Dutta — Academic Portfolio
 </footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if(sectionTop < triggerBottom){
+      section.classList.add('visible');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
